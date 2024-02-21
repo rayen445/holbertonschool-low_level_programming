@@ -9,6 +9,7 @@
  */
 int main(void)
 {
+    putchar('0');
     putchar('0' + 0);
     putchar('0' + 1);
     putchar('0' + 2);
