@@ -1,17 +1,24 @@
-#include <stdio.h>
+#include <unistd.h>
 
-int main() {
-    // Loop through each single-digit number
-    for (int i = 0; i <= 9; i++) {
-        // Print the current number
+/**
+ * main - Entry point
+ *
+ * Description: Prints all possible combinations of single-digit numbers
+ * separated by ", " using only the putchar function
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+    int i;
+
+    for (i = 0; i <= 9; i++)
+    {
         putchar(i + '0');
-        
-        // Print comma and space if it's not the last number
-        if (i != 9) {
-            putchar(',');
-            putchar(' ');
+        if (i != 9)
+        {
+            write(1, ", ", 2);
         }
     }
-    
-    return 0;
+
+    return (0);
 }
