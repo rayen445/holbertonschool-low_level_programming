@@ -1,5 +1,4 @@
 #include <unistd.h>
-#include <stdio.h>
 
 /**
  * main - Entry point
@@ -14,10 +13,10 @@ int main(void)
 
     for (i = 0; i < 9; i++)
     {
-        putchar(i + '0');
+        write(1, &i, 1);
         write(1, ", ", 2);
     }
-    putchar('9');
+    write(1, "9", 1);
 
     return (0);
 }
