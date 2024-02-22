@@ -1,23 +1,21 @@
-#include <unistd.h>
-
+#include <stdio.h>
 /**
- * main - Entry point
+ * main - Prints all possible combinations of single-digit Numbers.
  *
- * Description: Prints all possible combinations of single-digit numbers
- * separated by ", " using only the putchar function
- * Return: Always 0 (Success)
+ * Return: Always 0.
  */
 int main(void)
 {
-    int i;
+int Number;
 
-    for (i = 0; i < 9; i++)
-    {
-        write(1, &i, 1);
-        write(1, ", ", 2);
-    }
-    write(1, "9", 1);
-
-    return (0);
+	for (Number = 0; Number <= 9; Number++)
+	{
+		putchar((Number % 10) + '0');
+		if (Number == 9)
+			continue;
+		putchar(',');
+		putchar(' ');
+	}
+	putchar('\n');
+	return (0);
 }
-
