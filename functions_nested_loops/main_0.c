@@ -1,23 +1,7 @@
 #include "main.h"
-#include <stdio.h>
 
-/**
- * test_islower - Test _islower function.
- * Return: 0
- */
-int test_islower(void)
+int main(void)
 {
-	int r;
-	int n;
-
-	n = 'a';
-	r = _islower(n);
-	printf("%c: %d\n", n, r);
-	n = 'H';
-	r = _islower(n);
-	printf("%c: %d\n", n, r);
-	n = 108;
-	r = _islower(n);
-	printf("%c: %d\n", n, r);
-	return (0);
+    print_to_98(98);
+    return (0);
 }
