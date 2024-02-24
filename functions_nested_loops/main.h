@@ -1,6 +1,8 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-/* Function prototypes and other declarations */
+/* Other function prototypes */
+
+int print_last_digit(int n);
 
 #endif /* MAIN_H */
