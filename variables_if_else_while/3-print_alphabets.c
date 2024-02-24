@@ -5,23 +5,26 @@
  *
  * Description: Prints the alphabet in lowercase, then in uppercase,
  *              followed by a new line, using only putchar function three times.
+ *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-	char letter;
+    char letter;
 
-	for (letter = 'a'; letter <= 'z'; letter++)
-	{
-		putchar(letter);
-	}
+    /* Print lowercase alphabet */
+    for (letter = 'a'; letter <= 'z'; letter++)
+    {
+        putchar(letter);
+    }
 
-	for (letter = 'A'; letter <= 'Z'; letter++)
-	{
-		putchar(letter);
-	}
+    /* Print uppercase alphabet */
+    for (letter = 'A'; letter <= 'Z'; letter++)
+    {
+        putchar(letter);
+    }
 
-	putchar('\n');
+    putchar('\n');  /* Print newline */
 
-	return (0);
+    return (0);
 }
