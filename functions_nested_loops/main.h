@@ -2,7 +2,6 @@
 #define MAIN_H
 
 /* Other function prototypes */
-
-int print_last_digit(int n);
+int add(int a, int b);
 
 #endif /* MAIN_H */
