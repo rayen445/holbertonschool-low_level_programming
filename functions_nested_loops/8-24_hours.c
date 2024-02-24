@@ -1,16 +1,27 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * main - check the code
+ * times_table - Prints the 9 times table
  *
- * Return: Always 0.
+ * Return: void
  */
-int main(void)
+void times_table(void)
 {
-    print_last_digit(98);
-    print_last_digit(0);
-    int r = print_last_digit(-1024);
-    _putchar('0' + r);
-    _putchar('\n');
-    return (0);
+	int row, col, product;
+
+	for (row = 0; row <= 9; row++)
+	{
+		for (col = 0; col <= 9; col++)
+		{
+			product = row * col;
+			if (col == 0)
+				printf("%d", product);
+			else if (product < 10)
+				printf(",   %d", product);
+			else
+				printf(", %d", product);
+		}
+		printf("\n");
+	}
 }
