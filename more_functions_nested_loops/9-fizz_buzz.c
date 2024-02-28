@@ -7,46 +7,36 @@
  */
 int main(void)
 {
-<TAB>int i;
+    int i;
 
-<TAB>for (i = 1; i <= 100; i++)
-<TAB>{
-<TAB><TAB>if ((i % 3 == 0) && (i % 5 == 0))
-<TAB><TAB>{
-<TAB><TAB><TAB>_putchar('F');
-<TAB><TAB><TAB>_putchar('i');
-<TAB><TAB><TAB>_putchar('z');
-<TAB><TAB><TAB>_putchar('z');
-<TAB><TAB><TAB>_putchar('B');
-<TAB><TAB><TAB>_putchar('u');
-<TAB><TAB><TAB>_putchar('z');
-<TAB><TAB>}
-<TAB><TAB>else if (i % 3 == 0)
-<TAB><TAB>{
-<TAB><TAB><TAB>_putchar('F');
-<TAB><TAB><TAB>_putchar('i');
-<TAB><TAB><TAB>_putchar('z');
-<TAB><TAB><TAB>_putchar('z');
-<TAB><TAB>}
-<TAB><TAB>else if (i % 5 == 0)
-<TAB><TAB>{
-<TAB><TAB><TAB>_putchar('B');
-<TAB><TAB><TAB>_putchar('u');
-<TAB><TAB><TAB>_putchar('z');
-<TAB><TAB><TAB>_putchar('z');
-<TAB><TAB>}
-<TAB><TAB>else
-<TAB><TAB>{
-<TAB><TAB><TAB>_putchar(i + '0');
-<TAB><TAB>}
-<TAB><TAB>if (i < 100)
-<TAB><TAB>{
-<TAB><TAB><TAB>_putchar(' ');
-<TAB><TAB>}
-<TAB><TAB>else
-<TAB><TAB>{
-<TAB><TAB><TAB>_putchar('\n');
-<TAB><TAB>}
-<TAB>}
-<TAB>return (0);
+    for (i = 1; i <= 100; i++)
+    {
+        if ((i % 3 == 0) && (i % 5 == 0))
+        {
+            printf("FizzBuzz");
+        }
+        else if (i % 3 == 0)
+        {
+            printf("Fizz");
+        }
+        else if (i % 5 == 0)
+        {
+            printf("Buzz");
+        }
+        else
+        {
+            printf("%d", i);
+        }
+
+        if (i < 100)
+        {
+            printf(" ");
+        }
+        else
+        {
+            printf("\n");
+        }
+    }
+
+    return (0);
 }
