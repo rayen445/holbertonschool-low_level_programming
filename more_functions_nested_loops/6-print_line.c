@@ -6,17 +6,17 @@
  */
 void print_line(int n)
 {
-<TAB>int i;
+    int i;
 
-<TAB>if (n <= 0)
-<TAB>{
-<TAB><TAB>_putchar('\n');
-<TAB><TAB>return;
-<TAB>}
+    if (n <= 0)
+    {
+        _putchar('\n');
+        return;
+    }
 
-<TAB>for (i = 0; i < n; i++)
-<TAB>{
-<TAB><TAB>_putchar('_');
-<TAB>}
-<TAB>_putchar('\n');
+    for (i = 0; i < n; i++)
+    {
+        _putchar('_');
+    }
+    _putchar('\n');
 }
