@@ -6,15 +6,15 @@
  */
 void print_line(int n)
 {
-<TAB>if (n <= 0)
-<TAB>{
-<TAB><TAB>_putchar('\n');
-<TAB><TAB>return;
-<TAB>}
+    if (n <= 0)
+    {
+        _putchar('\n');
+        return;
+    }
 
-<TAB>while (n--)
-<TAB>{
-<TAB><TAB>_putchar('_');
-<TAB>}
-<TAB>_putchar('\n');
+    while (n--)
+    {
+        _putchar('_');
+    }
+    _putchar('\n');
 }
