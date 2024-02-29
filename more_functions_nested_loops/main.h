@@ -1,13 +1,7 @@
-#include "main.h"  /* Add this line to include the header file */
-#include <stdio.h> /* Include the necessary header file */
+#ifndef MAIN_H
+#define MAIN_H
 
-int main(void)
-{
-    char c;
+/* Function prototype */
+int _isupper(int c);
 
-    c = 'A';
-    printf("%c: %d\n", c, _isupper(c));
-    c = 'a';
-    printf("%c: %d\n", c, _isupper(c));
-    return (0);
-}
+#endif /* MAIN_H */

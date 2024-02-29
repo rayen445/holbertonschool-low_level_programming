@@ -1,5 +1,5 @@
-#include "main.h"  /* Add this line to include the header file */
-#include <stdio.h> /* Include the necessary header file */
+#include "main.h"
+#include <stdio.h>
 
 int main(void)
 {
