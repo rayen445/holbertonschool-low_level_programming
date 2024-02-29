@@ -17,7 +17,7 @@ int _atoi(char *s)
         i++;
 
     /* Check for sign character */
-    if (s[i] == '-' || s[i] == '+') {
+    while (s[i] == '-' || s[i] == '+') {
         if (s[i] == '-')
             sign *= -1;
         i++;
