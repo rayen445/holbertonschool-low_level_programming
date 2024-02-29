@@ -9,19 +9,19 @@
  */
 char *string_toupper(char *str)
 {
-    char *ptr;
+	char *ptr;
 
-    if (str == NULL)
-        return NULL;
+	if (str == NULL)
+		return NULL;
 
-    ptr = str;
+	ptr = str;
 
-    while (*ptr != '\0')
-    {
-        if (*ptr >= 'a' && *ptr <= 'z')
-            *ptr -= ('a' - 'A');
-        ptr++;
-    }
+	while (*ptr != '\0')
+	{
+		if (*ptr >= 'a' && *ptr <= 'z')
+			*ptr -= ('a' - 'A');
+		ptr++;
+	}
 
-    return str;
+	return str;
 }
