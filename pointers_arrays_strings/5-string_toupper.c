@@ -9,10 +9,13 @@
  */
 char *string_toupper(char *str)
 {
+    char *ptr;
+
     if (str == NULL)
         return NULL;
 
-    char *ptr = str;
+    ptr = str;
+
     while (*ptr != '\0')
     {
         if (*ptr >= 'a' && *ptr <= 'z')
