@@ -1,7 +1,8 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-void _putchar(char c);
-void print_numbers(void);
+/* Function prototype */
+void print_most_numbers(void);
+int _putchar(char c);
 
 #endif /* MAIN_H */
