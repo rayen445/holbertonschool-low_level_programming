@@ -2,22 +2,17 @@
 
 /**
  * _strcmp - Compares two strings
- * @s1: The first string
- * @s2: The second string
+ * @s1: The first string to compare
+ * @s2: The second string to compare
  *
- * Return: The difference between the ASCII values of the first differing characters
- *         0 if the strings are identical
+ * Return: An integer less than, equal to, or greater than zero if s1 is found,
+ * respectively, to be less than, to match, or be greater than s2.
  */
 int _strcmp(const char *s1, const char *s2)
 {
-    int i = 0;
+    int i;
 
-    while (s1[i] == s2[i])
-    {
-        if (s1[i] == '\0')
-            return 0;
-        i++;
-    }
-
+    for (i = 0; s1[i] && s2[i] && s1[i] == s2[i]; i++)
+        ;
     return s1[i] - s2[i];
 }
