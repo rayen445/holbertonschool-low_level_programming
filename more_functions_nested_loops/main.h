@@ -1,6 +1,6 @@
-#ifndef MAIN_H
-#define MAIN_H
+#include "main.h"
 
-int mul(int a, int b);
-
-#endif /* MAIN_H */
+int mul(int a, int b)
+{
+    return a * b;
+}
