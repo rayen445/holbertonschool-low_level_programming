@@ -1,17 +1,19 @@
-/* File: main.h */
+/* File: 5-main.c */
 
-#ifndef MAIN_H
-#define MAIN_H
-
+#include "main.h"
 #include <stdio.h>
 
-int _putchar(char c);
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    char s[10] = "My School";
 
-void _puts(char *str);
-void print_rev(char *s);
-int _strlen(char *s);
-void print_array(int *a, int n);
-void reset_to_98(int *n);
-void swap_int(int *a, int *b);
-
-#endif /* MAIN_H */
+    printf("%s\n", s);
+    rev_string(s);
+    printf("%s\n", s);
+    return (0);
+}
