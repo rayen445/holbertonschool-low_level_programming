@@ -12,7 +12,7 @@ char *string_toupper(char *str)
 	char *ptr;
 
 	if (str == NULL)
-		return NULL;
+		return (NULL);
 
 	ptr = str;
 
@@ -23,5 +23,5 @@ char *string_toupper(char *str)
 		ptr++;
 	}
 
-	return str;
+	return (str);
 }
