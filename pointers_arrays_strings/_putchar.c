@@ -1,13 +1,17 @@
-#include <unistd.h>
+#include "main.h"
 
 /**
- * _putchar - Writes a character to stdout
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ * puts2 - Prints every other character of a string, starting with the first
+ * @str: The string to print
  */
-int _putchar(char c)
+void puts2(char *str)
 {
-	return write(1, &c, 1);
+    int i = 0;
+
+    while (str[i] != '\0')
+    {
+        _putchar(str[i]);
+        i += 2;
+    }
+    _putchar('\n');
 }
