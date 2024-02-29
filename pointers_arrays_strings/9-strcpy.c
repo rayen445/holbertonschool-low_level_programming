@@ -9,12 +9,12 @@
  */
 char *_strcpy(char *dest, char *src)
 {
-    char *ptr = dest;
+	char *ptr = dest;
 
-    while (*src)
-    {
-        *dest++ = *src++;
-    }
-    *dest = '\0';  /* Append the null terminator */
-    return ptr;
+	while (*src)
+	{
+		*dest++ = *src++;
+	}
+	*dest = '\0';  /* Append the null terminator */
+	return (ptr);
 }
