@@ -1,16 +1,13 @@
 #include "main.h"
-#include <stdio.h>
 
-int main(void)
+/**
+ * mul - Multiplies two integers
+ * @a: First integer
+ * @b: Second integer
+ *
+ * Return: The result of the multiplication
+ */
+int mul(int a, int b)
 {
-    int i = 98;
-    int j = 1024;
-
-    printf("%d * %d: %d\n", i, j, mul(i, j));
-
-    i = -402;
-    j = 4096;
-    printf("%d * %d: %d\n", i, j, mul(i, j));
-
-    return (0);
+    return (a * b);
 }
