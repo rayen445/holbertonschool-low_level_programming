@@ -1,13 +1,21 @@
-#include "main.h"
+#include "main.h" // Include the header file containing the prototype for the mul function
+#include <stdio.h>
 
 /**
- * mul - Multiplies two integers
- * @a: First integer
- * @b: Second integer
+ * main - Entry point
  *
- * Return: The result of the multiplication
+ * Return: Always 0 (Success)
  */
-int mul(int a, int b)
+int main(void)
 {
-    return (a * b);
+    int i = 98;
+    int j = 1024;
+
+    printf("%d * %d: %d\n", i, j, mul(i, j));
+
+    i = -402;
+    j = 4096;
+    printf("%d * %d: %d\n", i, j, mul(i, j));
+
+    return (0);
 }
