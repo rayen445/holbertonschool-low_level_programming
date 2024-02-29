@@ -1,8 +1,8 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-/* Function prototype */
-void more_numbers(void);
+/* Function prototypes */
+void print_line(int n);
 int _putchar(char c);
 
 #endif /* MAIN_H */
