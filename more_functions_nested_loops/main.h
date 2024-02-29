@@ -1,7 +1,8 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-/* Function prototype */
-int _isupper(int c);
+#include <stdio.h>
+
+int _isdigit(int c);
 
 #endif /* MAIN_H */
