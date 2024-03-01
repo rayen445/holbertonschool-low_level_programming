@@ -1,15 +1,12 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-/*
- * File: main.h
- * Author: Your Name
- * Desc: Header file containing prototypes for all functions
- *       written in the main.c and referenced by the
- *       0x03-more_functions_nested_loops directory.
- */
+#include <unistd.h>
 
+/* putchar - writes the character c to stdout */
 int _putchar(char c);
-void jack_bauer(void);
+
+/* times_table - Prints the 9 times table, starting with 0 */
+void times_table(void);
 
 #endif /* MAIN_H */
