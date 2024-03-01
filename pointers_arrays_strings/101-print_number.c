@@ -1,4 +1,5 @@
 #include "main.h"
+#include <limits.h>
 
 /**
  * print_number - Prints an integer
@@ -6,6 +7,14 @@
  */
 void print_number(int n)
 {
+    if (n == INT_MIN)
+    {
+        _putchar('-');
+        _putchar('2');
+        print_number(147483648); /* Handle the rest as positive number */
+        return;
+    }
+
     if (n < 0)
     {
         _putchar('-');
