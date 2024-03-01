@@ -1,27 +1,22 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * times_table - Prints the 9 times table
- *
- * Return: void
+ * jack_bauer - Prints every minute of the day of Jack Bauer, from 00:00 to 23:59
  */
-void times_table(void)
+void jack_bauer(void)
 {
-	int row, col, product;
+    int hour, minute;
 
-	for (row = 0; row <= 9; row++)
-	{
-		for (col = 0; col <= 9; col++)
-		{
-			product = row * col;
-			if (col == 0)
-				printf("%d", product);
-			else if (product < 10)
-				printf(",   %d", product);
-			else
-				printf(", %d", product);
-		}
-		printf("\n");
-	}
+    for (hour = 0; hour < 24; hour++)
+    {
+        for (minute = 0; minute < 60; minute++)
+        {
+            _putchar((hour / 10) + '0');
+            _putchar((hour % 10) + '0');
+            _putchar(':');
+            _putchar((minute / 10) + '0');
+            _putchar((minute % 10) + '0');
+            _putchar('\n');
+        }
+    }
 }
