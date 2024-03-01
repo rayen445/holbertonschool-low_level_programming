@@ -1,11 +1,23 @@
 #include "main.h"
+#include <limits.h>
 
 /**
  * print_number - Prints an integer
  * @n: The integer to print
+ *
+ * Description: This function prints the integer @n to the standard output.
+ * It handles negative integers, including INT_MIN, correctly.
  */
 void print_number(int n)
 {
+    if (n == INT_MIN)
+    {
+        _putchar('-');
+        _putchar('2');
+        print_number(147483648); // Handle the rest as positive number
+        return;
+    }
+
     if (n < 0)
     {
         _putchar('-');
