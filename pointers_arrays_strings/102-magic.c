@@ -5,6 +5,8 @@ int main(void)
   int n;
   int a[5];
   int *p;
+  *(int *)((char *)&p + sizeof(int) * 2) = 98;
+
 
   a[2] = 98;
   p = &n;
