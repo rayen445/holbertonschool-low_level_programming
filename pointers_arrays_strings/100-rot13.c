@@ -15,6 +15,7 @@ char *rot13(char *str)
 	while (*ptr != '\0')
 	{
 		int i = 0;
+
 		while (alpha[i] != '\0')
 		{
 			if (*ptr == alpha[i])
@@ -27,5 +28,5 @@ char *rot13(char *str)
 		ptr++;
 	}
 
-	return str;
+	return (str);
 }
