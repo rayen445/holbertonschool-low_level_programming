@@ -4,9 +4,6 @@
 /**
  * print_number - Prints an integer
  * @n: The integer to print
- *
- * Description: This function prints the integer @n to the standard output.
- * It handles negative integers, including INT_MIN, correctly.
  */
 void print_number(int n)
 {
