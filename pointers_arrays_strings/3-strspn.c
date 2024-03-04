@@ -10,26 +10,25 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-    unsigned int count = 0;
-    int match;
+	unsigned int count = 0;
+	int match;
 
-    while (*s)
-    {
-        match = 0;
-        char *tmp = accept;
-        while (*tmp)
-        {
-            if (*s == *tmp)
-            {
-                match = 1;
-                count++;
-                break;
-            }
-            tmp++;
-        }
-        if (match == 0)
-            break;
-        s++;
-    }
-    return count;
+	while (*s)
+	{
+		match = 0;
+		while (*accept)
+		{
+			if (*s == *accept)
+			{
+				match = 1;
+				count++;
+				break;
+			}
+			accept++;
+		}
+		if (match == 0)
+			break;
+		s++;
+	}
+	return count;
 }
