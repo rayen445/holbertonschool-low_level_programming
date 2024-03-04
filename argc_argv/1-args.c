@@ -1,14 +1,14 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main - Entry point
- * @argc: The number of command line arguments
- * @argv: An array containing the command line arguments
- *
+ * main - prints the number of arguments passed to the program
+ * @argc: number of arguments
  * Return: Always 0
  */
 int main(int argc, char *argv[])
 {
-	printf("%d\n", argc - 1);
-	return (0);
+    _putcher(argc + '0');
+    _putcher('\n');
+
+    return (0);
 }
