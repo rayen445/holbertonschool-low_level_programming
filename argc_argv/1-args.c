@@ -1,16 +1,13 @@
-#include "main.h"
+#include <unistd.h>
 
 /**
- * main - prints the number of arguments passed to the program
- * @argc: number of arguments
- * @argv: array of arguments
- * Return: Always 0
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
  */
-int main(int argc, char *argv[])
+int _putchar(char c)
 {
-    (void)argv; /* Prevent unused parameter warning */
-    _putcher(argc + '0');
-    _putcher('\n');
-
-    return (0);
+    return write(1, &c, 1);
 }
