@@ -1,18 +1,32 @@
+/* 6-is_prime_number.c */
+
 #include "main.h"
 
 /**
- * factorial - returns the factorial of a given number
- * @n: the number to compute the factorial for
+ * is_prime_helper - checks if a number is prime
+ * @n: the number to check
+ * @divisor: the divisor to check
  *
- * Return: the factorial of n, or -1 if n is negative
+ * Return: 1 if the number is prime, 0 otherwise
  */
-int factorial(int n)
+int is_prime_helper(int n, int divisor)
 {
-	if (n < 0)
-		return (-1);
-
-	if (n == 0 || n == 1)
+	if (n <= 1)
+		return (0);
+	if (divisor > n / 2)
 		return (1);
-	else
-		return (n * factorial(n - 1));
+	if (n % divisor == 0)
+		return (0);
+	return (is_prime_helper(n, divisor + 1));
+}
+
+/**
+ * is_prime_number - checks if a number is prime
+ * @n: the number to check
+ *
+ * Return: 1 if the number is prime, 0 otherwise
+ */
+int is_prime_number(int n)
+{
+	return (is_prime_helper(n, 2));
 }
