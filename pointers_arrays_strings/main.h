@@ -3,7 +3,7 @@
 
 #include <stdio.h>
 
-int _putchar(char c);
-int _atoi(char *s);
+char *_memset(char *s, char b, unsigned int n);
+void simple_print_buffer(char *buffer, unsigned int size);
 
 #endif /* MAIN_H */
