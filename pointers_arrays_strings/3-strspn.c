@@ -11,24 +11,21 @@
 unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int count = 0;
-	int match;
+	char *ptr_s, *ptr_accept;
 
-	while (*s)
+	for (ptr_s = s; *ptr_s; ptr_s++)
 	{
-		match = 0;
-		while (*accept)
+		for (ptr_accept = accept; *ptr_accept; ptr_accept++)
 		{
-			if (*s == *accept)
+			if (*ptr_s == *ptr_accept)
 			{
-				match = 1;
 				count++;
 				break;
 			}
-			accept++;
 		}
-		if (match == 0)
+		if (!*ptr_accept)
 			break;
-		s++;
 	}
-	return (count);
+
+	return count;
 }
