@@ -7,6 +7,6 @@
  */
 int main(void)
 {
-    printf("Number of arguments: 0\n");
+    printf("0\n");
     return (0);
 }
