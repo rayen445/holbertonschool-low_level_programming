@@ -2,12 +2,11 @@
 
 /**
  * main - Entry point
- * @argc: The number of command-line arguments
  *
  * Return: Always 0
  */
-int main(int argc)
+int main(void)
 {
-    printf("%d\n", argc - 1);
+    printf("Number of arguments: %d\n", argc - 1);
     return 0;
 }
