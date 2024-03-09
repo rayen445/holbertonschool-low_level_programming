@@ -1,14 +1,9 @@
 #include <stdio.h>
 
-/**
- * main - Entry point
- * @argc: The number of command-line arguments
- * @argv: An array containing the program command-line arguments
- *
- * Return: Always 0
- */
 int main(int argc, char *argv[])
 {
-    printf("Number of arguments: %d\n", argc - 1);
+    // Subtract 1 to exclude the program name itself
+    printf("%d\n", argc - 1);
+
     return 0;
 }
