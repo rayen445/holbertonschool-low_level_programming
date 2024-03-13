@@ -2,22 +2,22 @@
 #include <stdlib.h>
 
 /**
- * free_grid - frees a 2 dimensional grid
- * @grid: the address of the two dimensional grid
- * @height: height of the grid
+ * free_grid - Frees a 2 dimensional grid.
+ * @grid: The address of the two dimensional grid.
+ * @height: Height of the grid.
  *
- * Return: void
+ * Return: void.
  */
 void free_grid(int **grid, int height)
 {
-        int i;
+	int i;
 
-        /* Free each row first */
-        for (i = 0; i < height; i++)
-        {
-                free(grid[i]);
-        }
+	/* Free each row first */
+	for (i = 0; i < height; i++)
+	{
+		free(grid[i]);
+	}
 
-        /* Free the entire grid */
-        free(grid);
+	/* Free the entire grid */
+	free(grid);
 }
