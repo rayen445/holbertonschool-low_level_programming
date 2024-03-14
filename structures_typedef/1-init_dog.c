@@ -7,6 +7,9 @@
  * @name: Pointer to the string containin the name of dog
  * @age: age of the dog
  * @owner: Pointer to the string containing the owner's name
+ * 
+ * Description: This function initializes a struct dog variable with
+ *              the provided values for name, age, and owner.
  */
 void init_dog(struct dog *d, char *name, float age, char *owner) 
 {
