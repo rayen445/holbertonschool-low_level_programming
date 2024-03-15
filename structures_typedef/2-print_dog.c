@@ -8,7 +8,7 @@
 * description: this function print the contents of a struct dog veriable.
 *              if any element of the sturct is NULL, it print (nil) instead.
 */
-viod print_dog(struct dog *d)
+void print_dog(struct dog *d)
 {
     if (d !=NULL)
     {
