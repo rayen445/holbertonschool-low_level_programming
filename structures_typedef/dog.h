@@ -9,14 +9,14 @@
  *
  * Description: structure containing information about a dog
  */
-struct dog
+typedef struct dog
 {
 	char *name;
 	float age;
 	char *owner;
-};
+}dog_t;
 
 /* function prototype */
-void print_dog(struct dog *d);
+void print_dog(dog_t *d);
 
 #endif /* DOG_H */
