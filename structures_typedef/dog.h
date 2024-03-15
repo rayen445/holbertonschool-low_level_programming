@@ -8,6 +8,7 @@ struct dog {
     char *owner;
 };
 
-void init_dog(struct dog *d, char *name, float age, char *owner);
+/* function prototype */
+void print_dog(struct dog *d);
 
 #endif /* DIG_H */
