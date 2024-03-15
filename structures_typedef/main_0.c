@@ -1,5 +1,5 @@
-#include "dog.h"
 #include <stdio.h>
+#include "dog.h"
 
 int main(void)
 {
@@ -13,10 +13,11 @@ int main(void)
     }
 
     printf("My dog's name is %s, and he is %.2f years old\n", my_dog->name, my_dog->age);
+
+    // Free the allocated memory
+    free(my_dog->name);
+    free(my_dog->owner);
+    free(my_dog);
+
     return 0;
-
-
-
-
-    
 }
