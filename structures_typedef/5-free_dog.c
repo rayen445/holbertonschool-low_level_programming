@@ -13,7 +13,7 @@ void free_dog(dog_t *d)
     /* free dynamically allocated memory for name and owner*/
     free (d->name);
     free (d->owner);
-
+    free_dog(my_dog)
 
     /* free memory allocated for the dog structure */
     free(d);
