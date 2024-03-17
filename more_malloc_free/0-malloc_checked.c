@@ -11,10 +11,10 @@
  */
 void *malloc_checked(unsigned int b)
 {
-    /* Allocate memory */
+   
     void *ptr = malloc(b);
 
-    /* Check if malloc failed */
+    
     if (ptr == NULL) 
     {
         printf("Error: malloc failed\n");
