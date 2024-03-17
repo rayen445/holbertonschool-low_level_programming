@@ -1,28 +1,25 @@
 #include "dog.h"
 #include <stdlib.h> /* For malloc */
-#include <string.h> /* For strlen, strcpy */
+#include <string.h> /* For strcpy */
 
 /**
  * new_dog - Creates a new dog with specified attributes
  * @name: The name of the dog
  * @age: The age of the dog
  * @owner: The owner of the dog
+ * @name_len: Length of the name string
+ * @owner_len: Length of the owner string
  *
  * Return: Pointer to the new dog, or NULL if malloc fails
  */
-dog_t *new_dog(char *name, float age, char *owner)
+dog_t *new_dog(char *name, float age, char *owner, size_t name_len, size_t owner_len)
 {
-    size_t name_len, owner_len;
     dog_t *new_dog;
     char *new_name, *new_owner;
 
     /* Check if name or owner is NULL */
     if (name == NULL || owner == NULL)
         return NULL;
-
-    /* Calculate the lengths of name and owner */
-    name_len = strlen(name);
-    owner_len = strlen(owner);
 
     /* Allocate memory for the dog structure */
     new_dog = malloc(sizeof(dog_t));
