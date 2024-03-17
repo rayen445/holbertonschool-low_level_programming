@@ -11,13 +11,15 @@
  */
 void *malloc_checked(unsigned int b)
 {
-    void *ptr = malloc(b); // Allocate memory
+    /* Allocate memory */
+    void *ptr = malloc(b);
 
-    if (ptr == NULL) // Check if malloc failed
+    /* Check if malloc failed */
+    if (ptr == NULL) 
     {
         printf("Error: malloc failed\n");
-        exit(98); // Terminate the process with status 98
+        exit(98);
     }
 
-    return ptr; // Return the allocated memory
+    return ptr;
 }
