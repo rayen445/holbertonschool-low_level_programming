@@ -1,5 +1,5 @@
-#include <stdlib.h> /* For malloc */
-#include <stdio.h>  /* For NULL definition */
+#include <stdlib.h> 
+#include <stdio.h>  
 
 /**
  * _calloc - Allocates memory for an array and initializes it to zero
