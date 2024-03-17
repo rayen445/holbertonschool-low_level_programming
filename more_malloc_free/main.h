@@ -1,8 +1,22 @@
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef DOG_H
+#define DOG_H
 
-#include <stdlib.h>
+/**
+ * struct dog - Defines a dog's attributes
+ * @name: The name of the dog
+ * @age: The age of the dog
+ * @owner: The owner of the dog
+ *
+ * Description: This structure defines a dog's attributes.
+ */
+typedef struct dog
+{
+    char *name;
+    float age;
+    char *owner;
+} dog_t;
 
-void *malloc_checked(unsigned int b);
+/* Function prototypes */
+dog_t *new_dog(char *name, float age, char *owner, size_t name_len, size_t owner_len);
 
-#endif /* MAIN_H */
+#endif /* DOG_H */

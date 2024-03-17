@@ -1,22 +1,55 @@
-#ifndef DOG_H
-#define DOG_H
+#include <stdio.h>
+#include <stdlib.h>
+#include "dog.h"
 
 /**
- * struct dog - Defines a dog's attributes
- * @name: The name of the dog
- * @age: The age of the dog
- * @owner: The owner of the dog
+ * new_dog - Creates a new dog
+ * @name: Name of the dog
+ * @age: Age of the dog
+ * @owner: Owner of the dog
  *
- * Description: This structure defines a dog's attributes.
+ * Return: Pointer to the newly created dog, or NULL if malloc fails
  */
-typedef struct dog
+dog_t *new_dog(char *name, float age, char *owner)
 {
-    char *name;
-    float age;
-    char *owner;
-} dog_t;
+    dog_t *new_dog_ptr;
+    int name_length = 0, owner_length = 0;
+    int i;
 
-/* Function prototypes */
-dog_t *new_dog(char *name, float age, char *owner, size_t name_len, size_t owner_len);
+    // Calculate the length of the name and owner strings
+    while (name[name_length])
+        name_length++;
+    while (owner[owner_length])
+        owner_length++;
 
-#endif /* DOG_H */
+    // Allocate memory for the new dog structure
+    new_dog_ptr = malloc(sizeof(dog_t));
+    if (new_dog_ptr == NULL)
+        return (NULL);
+
+    // Allocate memory for the name and owner strings
+    new_dog_ptr->name = malloc(sizeof(char) * (name_length + 1));
+    new_dog_ptr->owner = malloc(sizeof(char) * (owner_length + 1));
+
+    // Check if memory allocation was successful
+    if (new_dog_ptr->name == NULL || new_dog_ptr->owner == NULL)
+    {
+        // Free previously allocated memory if one of the allocations fails
+        free(new_dog_ptr->name);
+        free(new_dog_ptr->owner);
+        free(new_dog_ptr);
+        return (NULL);
+    }
+
+    // Copy the name and owner strings
+    for (i = 0; i <= name_length; i++)
+        new_dog_ptr->name[i] = name[i];
+    for (i = 0; i <= owner_length; i++)
+        new_dog_ptr->owner[i] = owner[i];
+
+    // Set the age of the new dog
+    new_dog_ptr->age = age;
+
+    // Return pointer to the newly created dog
+    return (new_dog_ptr);
+}
