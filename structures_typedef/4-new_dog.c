@@ -1,6 +1,6 @@
 #include "dog.h"
-#include <stdlib.h> // For malloc
-#include <string.h> // For strlen, strcpy
+#include <stdlib.h> 
+#include <string.h> 
 
 /**
  * new_dog - Creates a new dog with specified attributes
