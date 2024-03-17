@@ -1,7 +1,7 @@
 #include "main.h"
-#include <stdlib.h> // Include for malloc
-#include <stdio.h> // Include for printf
-#include <stdlib.h> // Include for exit
+#include <stdlib.h> /* Include for malloc */
+#include <stdio.h> /* Include for printf */
+#include <stdlib.h> /* Include for exit */
 
 /**
  * malloc_checked - Allocates memory using malloc
