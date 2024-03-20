@@ -9,7 +9,7 @@
  */
 void print_name_as_is(char *name)
 {
-    printf("Hello, my name is %s\n", name); // Fixed the format specifier
+    printf("Hello, my name is %s\n", name); /* Fixed the format specifier */
 }
 
 /**
@@ -20,7 +20,7 @@ void print_name_as_is(char *name)
  */
 void print_name_uppercase(char *name)
 {
-    unsigned int i; // Fixed the typo
+    unsigned int i; /* Fixed the typo */
 
     printf("Hello, my uppercase name is ");
     for (i = 0; name[i] != '\0'; i++) {
