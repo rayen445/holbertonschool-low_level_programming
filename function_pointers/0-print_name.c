@@ -2,41 +2,44 @@
 #include <stdio.h>
 
 /**
- * print_name - prints a name using a given printing function
- * @name: the name to  be printed
- * @f: pointer to the printing function
-*/
-
+ * print_name_as_is - prints a name as is
+ * @name: name of the person
+ *
+ * Return: Nothing.
+ */
 void print_name_as_is(char *name)
-
 {
-    printf("hello, my name is %s\n");
+    printf("Hello, my name is %s\n", name); // Fixed the format specifier
 }
 
-void print_name_uppercase(char*name)
+/**
+ * print_name_uppercase - print a name in uppercase
+ * @name: name of the person
+ *
+ * Return: Nothing.
+ */
+void print_name_uppercase(char *name)
 {
-    unsigend int i;
+    unsigned int i; // Fixed the typo
 
-    printf("hello, my uppercase name is");
-    i=0;
-    while (name[i])
-    {
-        if (naem[i] >= 'a' && name[i] <= 'z')
-         {
+    printf("Hello, my uppercase name is ");
+    for (i = 0; name[i] != '\0'; i++) {
+        if (name[i] >= 'a' && name[i] <= 'z') {
             putchar(name[i] + 'A' - 'a');
-        }
-        else
-        {
+        } else {
             putchar(name[i]);
         }
-        i++;
     }
+    putchar('\n');
 }
 
-int main(void)
+/**
+ * print_name - Prints a name using a given printing function
+ * @name: The name to be printed
+ * @f: Pointer to the printing function
+ */
+void print_name(char *name, void (*f)(char *))
 {
-    print_name("Bob", print_name_as_is);
-    print_name("Hodor", print_name_uppercase); 
-    printf("\n");
-    return (0);
+    if (name != NULL && f != NULL)
+        f(name);
 }
