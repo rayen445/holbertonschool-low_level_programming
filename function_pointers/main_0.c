@@ -27,6 +27,7 @@ void print_name_uppercase(char *name)
     putchar('\n');
 }
 
+
 int main(void)
 {
     print_name("Bob", print_name_as_is);
