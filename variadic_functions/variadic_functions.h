@@ -3,7 +3,7 @@
 
 #include <stdarg.h>
 
-/* Function prototypes */
-void print_strings(const char *separator, const unsigned int n, ...);
+/* Function prototype */
+void print_all(const char * const format, ...);
 
 #endif /* VARIADIC_FUNCTIONS_H */
