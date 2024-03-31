@@ -1,9 +1,7 @@
 #include <stdio.h>
 #include "dog.h"
 
-/**
- * main - check 
- */
+
 int main(void)
 {
     dog_t *my_dog;
