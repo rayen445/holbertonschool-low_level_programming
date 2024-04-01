@@ -4,6 +4,6 @@
 #include <stdlib.h>
 
 /* Function prototype */
-char *create_array(unsigned int size, char c);
+void *malloc_checked(unsigned int b);
 
 #endif /* MAIN_H */
