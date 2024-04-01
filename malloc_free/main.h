@@ -1,8 +1,9 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-void print_grid(int **grid, int width, int height);
-int **alloc_grid(int width, int height);
-void free_grid(int **grid, int height);
+#include <stdlib.h> /* For exit */
+
+/* Function prototype */
+void *malloc_checked(unsigned int b);
 
 #endif /* MAIN_H */
