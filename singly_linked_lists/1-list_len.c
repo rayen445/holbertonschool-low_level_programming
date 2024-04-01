@@ -8,14 +8,14 @@
  */
 size_t list_len(const list_t *h)
 {
-    size_t count = 0;
+	size_t count = 0;
 
-    /* Traverse the linked list */
-    while (h != NULL)
-    {
-        count++; /* Increment the count */
-        h = h->next; /* Move to the next node */
-    }
+	/* Traverse the linked list */
+	while (h != NULL)
+	{
+		count++; /* Increment the count */
+		h = h->next; /* Move to the next node */
+	}
 
-    return count;
+	return (count); /* Return the count */
 }
