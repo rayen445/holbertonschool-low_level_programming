@@ -1,36 +1,19 @@
-#include <stdlib.h> /* For malloc */
-#include <stdio.h>  /* For NULL definition */
+#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
- * _calloc - Allocates memory for an array and initializes it to zero
- * @nmemb: Number of elements in the array
- * @size: Size of each element in bytes
+ * malloc_checked - Allocates memory using malloc
+ * @b: The number of bytes to allocate
  *
- * Return: Pointer to the allocated memory, or NULL if allocation fails
+ * Return: A pointer to the allocated memory
  */
-void *_calloc(unsigned int nmemb, unsigned int size)
+void *malloc_checked(unsigned int b)
 {
-    void *ptr;
-    unsigned int i;
-    unsigned int total_size;
+	void *ptr = malloc(b);
 
-    /* Check for zero nmemb or size */
-    if (nmemb == 0 || size == 0)
-        return NULL;
+	if (ptr == NULL)
+		exit(98);
 
-    /* Calculate the total size to allocate */
-    total_size = nmemb * size;
-
-    /* Allocate memory */
-    ptr = malloc(total_size);
-
-    /* Check if allocation failed */
-    if (ptr == NULL)
-        return NULL;
-
-    /* Initialize the allocated memory to zero */
-    for (i = 0; i < total_size; i++)
-        *((char *)ptr + i) = 0;
-
-    return ptr;
+	return (ptr);
 }
