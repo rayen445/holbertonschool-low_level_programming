@@ -3,19 +3,12 @@
 
 #include <stdlib.h>
 
-/**
- * struct dlistint_s - doubly linked list
- * @n: Integer stored in the node
- * @prev: Pointer to the previous element of the list
- * @next: Pointer to the next element of the list
- *
- * Description: Doubly linked list node structure
- */
+/* Doubly linked list node structure */
 typedef struct dlistint_s
 {
-	int n;
-	struct dlistint_s *prev;
-	struct dlistint_s *next;
+    int n;
+    struct dlistint_s *prev;
+    struct dlistint_s *next;
 } dlistint_t;
 
 /* Function prototypes */
