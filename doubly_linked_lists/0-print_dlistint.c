@@ -1,21 +1,30 @@
-#include "lists.h"
+#ifndef LISTS_H
+#define LISTS_H
+
+#include <stddef.h>
 
 /**
- * print_dlistint - prints all the elements of a dlistint_t list
- * @h: pointer to the head of the list
+ * struct dlistint_s - Doubly linked list node
+ * @n: Integer stored in the node
+ * @prev: Pointer to the previous element of the list
+ * @next: Pointer to the next element of the list
  *
- * Return: the number of nodes
+ * Description: Doubly linked list node structure
  */
-size_t print_dlistint(const dlistint_t *h)
+typedef struct dlistint_s
 {
-	size_t count = 0;
+	int n;
+	struct dlistint_s *prev;
+	struct dlistint_s *next;
+} dlistint_t;
 
-	while (h != NULL)
-	{
-		printf("%d\n", h->n);
-		h = h->next;
-		count++;
-	}
+/* Function prototypes */
+size_t print_dlistint(const dlistint_t *h);
+size_t print_dlistint_backward(const dlistint_t *h);
+dlistint_t *add_dnodeint(dlistint_t **head, const int n);
+dlistint_t *add_dnodeint_end(dlistint_t **head, const int n);
+void free_dlistint(dlistint_t *head);
+int delete_dnodeint_at_index(dlistint_t **head, unsigned int index);
+int sum_dlistint(dlistint_t *head);
 
-	return (count);
-}
+#endif /* LISTS_H */
