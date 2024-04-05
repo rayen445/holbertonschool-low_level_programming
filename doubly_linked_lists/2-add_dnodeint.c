@@ -1,22 +1,32 @@
 #include "lists.h"
-#include <stdio.h>  // Add this line to include the stdio header
 
 /**
- * print_dlistint - Prints all the elements of a dlistint_t list
- * @h: Pointer to the head of the list
+ * add_dnodeint - Adds a new node at the beginning of a dlistint_t list
+ * @head: Pointer to the head of the list
+ * @n: Value to store in the new node
  *
- * Return: The number of nodes
+ * Return: Address of the new element, or NULL if it failed
  */
-size_t print_dlistint(const dlistint_t *h)
+dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
-    size_t nodes = 0;
+    dlistint_t *new_node;
 
-    while (h != NULL)
-    {
-        printf("%d\n", h->n);  // Update this line to use printf
-        h = h->next;
-        nodes++;
-    }
+    /* Allocate memory for the new node */
+    new_node = malloc(sizeof(dlistint_t));
+    if (new_node == NULL)
+        return (NULL);
 
-    return (nodes);
+    /* Initialize the new node */
+    new_node->n = n;
+    new_node->prev = NULL;
+    new_node->next = *head;
+
+    /* Update the previous pointer of the current head node */
+    if (*head != NULL)
+        (*head)->prev = new_node;
+
+    /* Update the head pointer to point to the new node */
+    *head = new_node;
+
+    return (new_node);
 }
