@@ -1,22 +1,42 @@
-#include <stdio.h>
 #include "lists.h"
 
 /**
- * print_dlistint - Prints all the elements of a dlistint_t list
- * @h: Pointer to the head of the list
+ * delete_dnodeint_at_index - Deletes the node at index of a dlistint_t list
+ * @head: Pointer to the head of the list
+ * @index: Index of the node that should be deleted
  *
- * Return: The number of nodes in the list
+ * Return: 1 if successful, -1 if failed
  */
-size_t print_dlistint(const dlistint_t *h)
+int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-    size_t count = 0;
+    dlistint_t *current = *head;
+    unsigned int i = 0;
 
-    while (h != NULL)
+    if (*head == NULL)
+        return (-1);
+
+    if (index == 0)
     {
-        printf("%d\n", h->n);
-        h = h->next;
-        count++;
+        *head = current->next;
+        if (current->next)
+            current->next->prev = NULL;
+        free(current);
+        return (1);
     }
 
-    return (count);
+    while (current != NULL && i < index)
+    {
+        current = current->next;
+        i++;
+    }
+
+    if (current == NULL)
+        return (-1);
+
+    current->prev->next = current->next;
+    if (current->next)
+        current->next->prev = current->prev;
+    free(current);
+
+    return (1);
 }
