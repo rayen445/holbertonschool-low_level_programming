@@ -1,10 +1,13 @@
-#ifndef MAIN_H
-#define MAIN_H
+#include "main.h"
 
-#include <stddef.h>
+/**
+ * print_binary - Prints the binary representation of a number
+ * @n: The number to print in binary
+ */
+void print_binary(unsigned long int n)
+{
+    if (n > 1)
+        print_binary(n >> 1);
 
-int _putchar(char c);
-unsigned int binary_to_uint(const char *b);
-void print_binary(unsigned long int n);
-
-#endif /* MAIN_H */
+    _putchar((n & 1) + '0');
+}
