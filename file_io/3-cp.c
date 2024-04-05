@@ -11,8 +11,8 @@
  */
 void error_usage(void)
 {
-    dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
-    exit(97);
+	dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+	exit(97);
 }
 
 /**
@@ -21,8 +21,8 @@ void error_usage(void)
  */
 void error_read(const char *filename)
 {
-    dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", filename);
-    exit(98);
+	dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", filename);
+	exit(98);
 }
 
 /**
@@ -31,8 +31,8 @@ void error_read(const char *filename)
  */
 void error_write(const char *filename)
 {
-    dprintf(STDERR_FILENO, "Error: Can't write to %s\n", filename);
-    exit(99);
+	dprintf(STDERR_FILENO, "Error: Can't write to %s\n", filename);
+	exit(99);
 }
 
 /**
@@ -41,8 +41,8 @@ void error_write(const char *filename)
  */
 void error_close(int fd)
 {
-    dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
-    exit(100);
+	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+	exit(100);
 }
 
 /**
@@ -53,36 +53,36 @@ void error_close(int fd)
  */
 int main(int argc, char *argv[])
 {
-    int fd_from, fd_to;
-    ssize_t bytes_read, bytes_written;
-    char buffer[BUFFER_SIZE];
+	int fd_from, fd_to;
+	ssize_t bytes_read, bytes_written;
+	char buffer[BUFFER_SIZE];
 
-    if (argc != 3)
-        error_usage();
+	if (argc != 3)
+		error_usage();
 
-    fd_from = open(argv[1], O_RDONLY);
-    if (fd_from == -1)
-        error_read(argv[1]);
+	fd_from = open(argv[1], O_RDONLY);
+	if (fd_from == -1)
+		error_read(argv[1]);
 
-    fd_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
-    if (fd_to == -1)
-        error_write(argv[2]);
+	fd_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
+	if (fd_to == -1)
+		error_write(argv[2]);
 
-    while ((bytes_read = read(fd_from, buffer, BUFFER_SIZE)) > 0)
-    {
-        bytes_written = write(fd_to, buffer, bytes_read);
-        if (bytes_written == -1 || bytes_written != bytes_read)
-            error_write(argv[2]);
-    }
+	while ((bytes_read = read(fd_from, buffer, BUFFER_SIZE)) > 0)
+	{
+		bytes_written = write(fd_to, buffer, bytes_read);
+		if (bytes_written == -1 || bytes_written != bytes_read)
+			error_write(argv[2]);
+	}
 
-    if (bytes_read == -1)
-        error_read(argv[1]);
+	if (bytes_read == -1)
+		error_read(argv[1]);
 
-    if (close(fd_from) == -1)
-        error_close(fd_from);
+	if (close(fd_from) == -1)
+		error_close(fd_from);
 
-    if (close(fd_to) == -1)
-        error_close(fd_to);
+	if (close(fd_to) == -1)
+		error_close(fd_to);
 
-    return (0);
+	return (0);
 }
